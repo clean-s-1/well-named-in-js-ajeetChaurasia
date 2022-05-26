@@ -1,9 +1,9 @@
 import {
 	getColorFromPairNumber,
 	getPairNumberFromColor,
-} from './colorUtils.js';
-import { ColorPair } from './colors.js';
-import { printColorManual } from './printColorManual.js';
+} from './colorTranslator.js';
+import { MajorColorNames, MinorColorNames, ColorPair } from './colors.js';
+import { getColorManual, printColorManual } from './printColorManual.js';
 let pairNumber;
 function checkPairNumberAndPairColor() {
 	pairNumber = 4;
@@ -37,7 +37,13 @@ function checkPairNumberAndPairColor() {
 	pairNumber = getPairNumberFromColor(pairColor);
 	console.log(`[In]Colors: ${pairColor}, [Out] PairNumber: ${pairNumber}`);
 	console.assert(pairNumber == 6);
+
+	let colorManual = getColorManual(MajorColorNames, MinorColorNames);
+	console.assert(colorManual[8].pairNumber == 9);
+	console.assert(colorManual[8].majorColor == 'RED');
+	console.assert(colorManual[8].minorColor == 'BROWN');
 }
+
 checkPairNumberAndPairColor();
-printColorManual();
+printColorManual(MajorColorNames, MinorColorNames);
 
