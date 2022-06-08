@@ -7,5 +7,5 @@ export function ColorPair() {
 }
 
 ColorPair.prototype.toString = function () {
-	return `MajorColor:${this.majorColor},MinorColr:${this.minorColor}`;
+	return `Major Color:${this.majorColor},Minor Color:${this.minorColor}`;
 };

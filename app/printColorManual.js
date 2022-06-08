@@ -5,7 +5,7 @@ export function getColorManual(majorColors, minorColors) {
 	let majorSize = minorColors.length;
 	let colorManualObject = [];
 	for (let i = 1; i <= minorSize * majorSize; i++) {
-		let colorNamesObject = getColorFromPairNumber(i);
+		let colorNamesObject = getColorFromPairNumber(i, majorColors, minorColors);
 		colorManualObject.push({
 			pairNumber: i,
 			majorColor: colorNamesObject.majorColor,
