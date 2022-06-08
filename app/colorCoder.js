@@ -7,31 +7,19 @@ import { getColorManual, printColorManual } from './printColorManual.js';
 let pairNumber;
 function checkPairNumberAndPairColor() {
 	pairNumber = 4;
-	let pairColor = getColorFromPairNumber(
-		pairNumber,
-		MajorColorNames,
-		MinorColorNames
-	);
+	let pairColor = getColorFromPairNumber(pairNumber,MajorColorNames,MinorColorNames);
 	console.log(`[In]Pair Number: ${pairNumber},[Out] Colors:${pairColor}`);
 	console.assert(pairColor.majorColor == 'WHITE');
 	console.assert(pairColor.minorColor == 'BROWN');
 
 	pairNumber = 5;
-	pairColor = getColorFromPairNumber(
-		pairNumber,
-		MajorColorNames,
-		MinorColorNames
-	);
+	pairColor = getColorFromPairNumber(pairNumber,MajorColorNames,MinorColorNames);
 	console.log(`[In]Pair Number: ${pairNumber},[Out] Colors:${pairColor}`);
 	console.assert(pairColor.majorColor == 'WHITE');
 	console.assert(pairColor.minorColor == 'SLATE');
 
 	pairNumber = 23;
-	pairColor = getColorFromPairNumber(
-		pairNumber,
-		MajorColorNames,
-		MinorColorNames
-	);
+	pairColor = getColorFromPairNumber(pairNumber,MajorColorNames,MinorColorNames);
 	console.log(`[In]Pair Number: ${pairNumber},[Out] Colors:${pairColor}`);
 	console.assert(pairColor.majorColor == 'VIOLET');
 	console.assert(pairColor.minorColor == 'GREEN');
@@ -39,22 +27,14 @@ function checkPairNumberAndPairColor() {
 	pairColor = new ColorPair();
 	pairColor.majorColor = 'YELLOW';
 	pairColor.minorColor = 'GREEN';
-	pairNumber = getPairNumberFromColor(
-		pairColor,
-		MajorColorNames,
-		MinorColorNames
-	);
+	pairNumber = getPairNumberFromColor(pairColor,MajorColorNames,MinorColorNames);
 	console.log(`[In]Colors: ${pairColor}, [Out] PairNumber: ${pairNumber}`);
 	console.assert(pairNumber == 18);
 
 	pairColor = new ColorPair();
 	pairColor.majorColor = 'RED';
 	pairColor.minorColor = 'BLUE';
-	pairNumber = getPairNumberFromColor(
-		pairColor,
-		MajorColorNames,
-		MinorColorNames
-	);
+	pairNumber = getPairNumberFromColor(pairColor,MajorColorNames,MinorColorNames);
 	console.log(`[In]Colors: ${pairColor}, [Out] PairNumber: ${pairNumber}`);
 	console.assert(pairNumber == 6);
 
